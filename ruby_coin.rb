@@ -19,7 +19,6 @@ class RubyCoin < Types::ABCIApplication::Service
       Account.all << self
     end
 
-    attr_accessor :foreign_key
     attr_accessor :balance
     attr_reader :prkey
     attr_reader :pubkey
@@ -35,18 +34,18 @@ class RubyCoin < Types::ABCIApplication::Service
   class Transaction
 
     def initialize(sender, receiver, amount)
+      @amount = amount
       @sender = sender
       @sender_act = nil
       @receiver = receiver
       @receiver_act = nil
-      @amount = amount
       @sequence = nil
     end
 
     attr_reader :amount
     attr_reader :sender
-    attr_reader :receiver
     attr_accessor :sender_act
+    attr_reader :receiver
     attr_accessor :receiver_act
     attr_accessor :sequence
 
