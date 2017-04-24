@@ -43,11 +43,9 @@ class RubyCoin < Types::ABCIApplication::Service
       @sequence = nil
     end
 
-    attr_reader :byte_self
     attr_reader :amount
     attr_reader :sender
     attr_reader :receiver
-    attr_reader :destination
     attr_accessor :sender_act
     attr_accessor :receiver_act
     attr_accessor :sequence
@@ -55,7 +53,6 @@ class RubyCoin < Types::ABCIApplication::Service
   end
 
   accounts = []
-  transactions = []
   @@commit_count = 0
   @@trans_count = 0
 
