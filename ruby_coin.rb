@@ -33,7 +33,6 @@ class RubyCoin < Types::ABCIApplication::Service
   end
 
   class Transaction
-    @all = []
 
     def initialize(sender, receiver, amount)
       @sender = sender
@@ -42,7 +41,6 @@ class RubyCoin < Types::ABCIApplication::Service
       @receiver_act = nil
       @amount = amount
       @sequence = nil
-      Transaction.all << self
     end
 
     attr_reader :byte_self
@@ -53,10 +51,6 @@ class RubyCoin < Types::ABCIApplication::Service
     attr_accessor :sender_act
     attr_accessor :receiver_act
     attr_accessor :sequence
-
-    class << self
-      attr_accessor :all
-    end
 
   end
 
@@ -111,6 +105,10 @@ class RubyCoin < Types::ABCIApplication::Service
         if verify_key.verify(@signature, byte_tx)
           if tx.sender_act.balance >= tx.amount
             @@trans_count += 1
+            tx.sender_act.balance -= tx.amount
+            tx.receiver_act.balance += tx.amount
+            p tx.sender_act.balance
+            p tx.receiver_act.balance
             Types::ResponseDeliverTx.new(code: :OK, log: "transferring #{tx.amount} coins")
           else
             Types::ResponseDeliverTx.new(code: :BadNonce, log: "insufficent funds")
@@ -179,11 +177,6 @@ class RubyCoin < Types::ABCIApplication::Service
 
       byte_array << last_byte
       byte_string = byte_array.pack("C*")
-
-      Transaction.all.each do |t|
-        t.sender_act.balance -= t.amount
-        t.receiver_act.balance += t.amount
-      end
 
       Types::ResponseCheckTx.new(data: byte_string)
     else
