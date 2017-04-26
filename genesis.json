@@ -1,17 +1,12 @@
 {
-  "e9e0aa09dd488302cf3853d4290261c9d8dbfcb3": {
-    "balance": 100,
-    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  nq7S26VJfABPwyMDzmgEUIAPCt27FNYBULHW4i9mRIM=\n",
-    "sequence": 0
+  "3ae5afa84f5b00b3f72a637f2e3a4d6fff93c53e": {
+    "balance": 80,
+    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  EOwXJpPSDQ+lJ/W8ay7qHD78N+V1jMlILga5bIT2lCE=\n",
+    "seq": 2
   },
-  "dee32490d504eefcee270eb961aaab9b39359a95": {
-    "balance": 90,
-    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  +VgWkGTZUrToYWjYpxUgG9MarJbuQAtmOrHjOmVET8Q=\n",
-    "sequence": 1
-  },
-  "255751d2e9b4183f7b330d303f99e9a192b88d95": {
-    "balance": 110,
-    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  s8mlI/ojDTkZ3LxZAi0kCDZxVBrM8ojTJ4gZZ4axhqo=\n",
-    "sequence": 0
+  "ac128a0fd1a90515d06e1f6917f255f37e9337ae": {
+    "balance": 120,
+    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  zxi3geq9qoJL2xxtlWL7xZb80tZsfidfYtqquTBiTWY=\n",
+    "seq": 0
   }
 }

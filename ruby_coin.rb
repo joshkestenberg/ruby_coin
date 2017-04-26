@@ -70,6 +70,8 @@ class RubyCoin < Types::ABCIApplication::Service
         jmessage = message.to_json
         if verify_key.verify([tx.sig].pack("H*"), jmessage)
           if accounts_hash[t_hash["from"]]["balance"] >= tx.amount
+            p accounts_hash[t_hash["from"]]["seq"]
+            p tx.seq
             if accounts_hash[t_hash["from"]]["seq"] == tx.seq
               accounts_hash[t_hash["from"]]["balance"] -= tx.amount
               accounts_hash[t_hash["from"]]["seq"] += 1
