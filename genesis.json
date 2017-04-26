@@ -1,0 +1,17 @@
+{
+  "e9e0aa09dd488302cf3853d4290261c9d8dbfcb3": {
+    "balance": 100,
+    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  nq7S26VJfABPwyMDzmgEUIAPCt27FNYBULHW4i9mRIM=\n",
+    "sequence": 0
+  },
+  "dee32490d504eefcee270eb961aaab9b39359a95": {
+    "balance": 90,
+    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  +VgWkGTZUrToYWjYpxUgG9MarJbuQAtmOrHjOmVET8Q=\n",
+    "sequence": 1
+  },
+  "255751d2e9b4183f7b330d303f99e9a192b88d95": {
+    "balance": 110,
+    "pubkey": "--- !ruby/object:RbNaCl::Signatures::Ed25519::VerifyKey\nkey: !binary |-\n  s8mlI/ojDTkZ3LxZAi0kCDZxVBrM8ojTJ4gZZ4axhqo=\n",
+    "sequence": 0
+  }
+}
