@@ -1,5 +1,7 @@
 # ruby_coin
 
+##first, you must install gems 'rbnacl/libsodium', 'rbnacl', 'yaml', 'json', 'digest'
+
 1. run actgen  ```ruby actgen.rb``` (even though there are already seeded accounts, you need to create an account in order to acquire a private key)
 2. run keygen  ```ruby keygen.rb```--- it will prompt you for a json string like this: 
 
